@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatup</title>
+    <link rel="stylesheet" href="../PROJECT/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../PROJECT/bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../PROJECT/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../PROJECT/project.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="img_container">
+                    <img src="../PROJECT/img/projectimg/fireworkevent.jpg" class="img-responsive" alt="Image">
+                    <p id="timer" class="text_img_centered"></p>
+                </div>
+                <h3 class="center">Funzone's 10 years old Birthday!!</h3>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
+                <img src="../PROJECT/img/projectimg/singevent.jpg" alt="">
+            </div>
+
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 m-3">
+                <h3>Sing_event</h3>
+            </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 m-3">
+                    <h3>happly Weekend!</h3>
+                </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
+                <img src="../PROJECT/img/projectimg/happy-weekend.jpg" alt="">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1">
+                <img src="../PROJECT/img/projectimg/halloweenevent.jpg" alt="">
+                <h3 class="center">happly Halloween!</h3>
+            </div>
+
+           
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Set the date counting down 
+        var countDownDate = new Date("Sep 1, 2021 21:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date( by secornds)
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result 
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // exoired when the count down is over
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+        // 1000=1s setInterval function use for show epression everyevery interval(here is 1000)
+    </script>
+</body>
+
+</html>
