@@ -1,4 +1,6 @@
 .container img{width: 100%;
+    margin: 0;
+    padding: 0;
                 }
 .infomation {text-align: left;
             margin: 5px;
@@ -9,16 +11,19 @@
     border: double;}
 
 /* boder red cho required */
-.required{ border: red solid 1px;
+.required{ border: rgb(65, 4, 4) solid 1px;
         }
 /* canh center(cho dang text) class cho block phia ngoài */
 .center{ text-align: center;
         padding: auto;
     }
 /* background color */
-.bg_color{background-color: green;}
+.bg_color{background-color: rgb(215, 234, 245);}
 /* text color */
-.color{ color: white;}
+.color{ color: rgb(243, 103, 22);}
+.color1{ color: rgb(66, 47, 236);}
+.color2{ color: rgb(95, 241, 108);}
+.color3{ color: rgb(3, 0, 0);}
 /* đóng khung lại 1 div */
 .boder{
     border: double;
@@ -26,7 +31,7 @@
 
 
 /* tao chu bu đổ bóng  */
-.shadow{color: gray;
+.shadow{color: rgb(240, 47, 47);
         text-shadow: gray 3px 3px 3px;
         font-size: 4rem;
         text-transform: capitalize;}
@@ -39,11 +44,11 @@
     font-family: inherit;
     }
 /* chỉnh margin 1-5 1=20px */
-.m-1{margin: 2rem 0rem;}
-.m-2{margin: 4rem 0rem;}
-.m-3{margin: 6rem 0rem;}
-.m-4{margin: 8rem 0rem;}
-.m-5{margin: 10rem 0rem;}
+.m-1{margin: 2rem 0rem 1rem 0rem;}
+.m-2{margin: 4rem 0rem 1rem 0rem;}
+.m-3{margin: 6rem 0rem 1rem 0rem;}
+.m-4{margin: 8rem 0rem 1rem 0rem;}
+.m-5{margin: 10rem 0rem 1rem 0rem;}
 
 /* HOVER IMG */
 .img_invi{display: none;
@@ -52,17 +57,129 @@
 /* text_img */
 .text_img_centered {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);}
-.text_img_centered_bottom {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);}
 .img_container {
         position: relative;
         text-align: center;
-        color:cyan;
+        color:rgb(243, 247, 7);
         font-size:300%;
       }
+/* overlayimg */
+.overlay_text {
+    color: rgb(101, 78, 230);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.overlay_image {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  
+  /* overlaybot */
+  .overlaybot_container {
+    position: relative;
+  
+  }
+  .overlaybot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgb(235, 168, 168);
+    overflow: hidden;
+    height: 0%;
+    transition: .5s ease;
+  }
+  
+  .overlaybot_container:hover .overlaybot {
+    height: 30%;
+  }
+  
+
+  /* overlay zoom */
+  .overlayzoom_container {
+    position: relative;
+    
+  }
+  .overlayzoom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  
+  .overlayzoom_container:hover .overlayzoom {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  /* modal css */
+  /* background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  /* X button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+/* name */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+   
+    font-size: 200%;
+    
+  }
+  

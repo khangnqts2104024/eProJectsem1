@@ -12,49 +12,100 @@
     <link rel="stylesheet" href="../PROJECT/project.css">
 </head>
 
-<body>
+<body style="background-color: #CCFFFF;">
 
 
     <div class="container">
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="img_container">
-                    <img src="../PROJECT/img/projectimg/fireworkevent.jpg" class="img-responsive" alt="Image">
+                <div class="img_container overlayzoom_container m-1">
+                    <img src="../PROJECT/img/projectimg/fireworkevent.jpg" class="img-responsive overlay_image"
+                        alt="Image">
                     <p id="timer" class="text_img_centered"></p>
+                    <div class="overlayzoom">
+                        <img src="../PROJECT/img/projectimg/10thBD.jpg" class="overlay_text" alt="">
+                    </div>
                 </div>
-                <h3 class="center">Funzone's 10 years old Birthday!!</h3>
+                <div class="center shadow">
+                    <h1>Fun Zone 10th Birthday!</h1>
+                    <h3>Firework show and many secrets activities waiting for you! </h3>
+                    <hr class="required">
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
-                <img src="../PROJECT/img/projectimg/singevent.jpg" alt="">
-            </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
+                    <img src="../PROJECT/img/projectimg/singevent.jpg" alt="">
+                </div>
 
-            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 m-3">
-                <h3>Sing_event</h3>
-            </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
+                    <h3>Sing event</h3>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 m-3">
                     <h3>happly Weekend!</h3>
                 </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
-                <img src="../PROJECT/img/projectimg/happy-weekend.jpg" alt="">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 m-3">
+                    <img src="../PROJECT/img/projectimg/happy-weekend.jpg" alt="">
+                </div>
             </div>
             <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1">
                 <img src="../PROJECT/img/projectimg/halloweenevent.jpg" alt="">
-                <h3 class="center">happly Halloween!</h3>
+                <h3 class="center color">Halloween is comming!</h3>
+                <hr class="required">
             </div>
 
-           
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <h2>More and more event wait for you and your family:</h2>
+
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 m-3">
+                    <div class="overlaybot_container">
+                        <img src="../PROJECT/img/projectimg/samba_dancers.jpg" alt=""
+                            class="img-responsive overlay_image">
+                        <div class="overlaybot">
+                            <p class="overlay_text">Samba Dance Festival</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 m-3">
+                    <div class="overlaybot_container">
+                        <img src="../PROJECT/img/projectimg/kiddayevent.jpg" alt=""
+                            class="img-responsive overlay_image">
+                        <div class="overlaybot">
+                            <p class="overlay_text">Kid Day!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 m-3">
+                    <div class="overlaybot_container">
+                        <img src="../PROJECT/img/projectimg/buy1get1free.jpg" alt=""
+                            class="img-responsive overlay_image">
+                        <div class="overlaybot">
+                            <p class="overlay_text">Happy price day!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 m-3">
+                    <div class="overlaybot_container">
+                        <img src="../PROJECT/img/projectimg/chinesevalentine's.jpg" alt=""
+                            class="img-responsive overlay_image">
+                        <div class="overlaybot">
+                            <p class="overlay_text">Lover's day</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
     </div>
 
-
-
     <script>
-        // Set the date counting down 
+        // Set the date counting down
         var countDownDate = new Date("Sep 1, 2021 21:00:00").getTime();
 
         // Update the count down every 1 second
@@ -72,7 +123,7 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result 
+            // Output the result
             document.getElementById("timer").innerHTML = days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ";
 
