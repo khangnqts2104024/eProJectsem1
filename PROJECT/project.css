@@ -1,7 +1,10 @@
+.container-fluid img{width:100%;
+  vertical-align: middle;}
 .container img{width: 100%;
+      height: 100%;
     margin: 0;
     padding: 0;
-                }
+    vertical-align: middle;}
 .infomation {text-align: left;
             margin: 5px;
             
@@ -20,20 +23,20 @@
 /* background color */
 .bg_color{background-color: rgb(215, 234, 245);}
 /* text color */
-.color{ color: rgb(243, 103, 22);}
+.color{ color: rgb(250, 145, 25);}
 .color1{ color: rgb(66, 47, 236);}
 .color2{ color: rgb(95, 241, 108);}
 .color3{ color: rgb(3, 0, 0);}
+.color4{color: rgb(240, 47, 47);}
 /* đóng khung lại 1 div */
 .boder{
     border: double;
-    padding: 2rem;}
+  }
 
 
 /* tao chu bu đổ bóng  */
-.shadow{color: rgb(240, 47, 47);
+.shadow{
         text-shadow: gray 3px 3px 3px;
-        font-size: 4rem;
         text-transform: capitalize;}
 /* title */
 .title_text{  text-align: center;
@@ -44,6 +47,7 @@
     font-family: inherit;
     }
 /* chỉnh margin 1-5 1=20px */
+.m-0{margin: 0;}
 .m-1{margin: 2rem 0rem 1rem 0rem;}
 .m-2{margin: 4rem 0rem 1rem 0rem;}
 .m-3{margin: 6rem 0rem 1rem 0rem;}
@@ -182,4 +186,82 @@
     font-size: 200%;
     
   }
-  
+  /* clearfix */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /* height for div */
+  .maineheight {
+    height: 80vh;
+}
+
+.height-12 {
+    height: 100%;
+}
+
+.height-11 {
+    height: 91.66666667%;
+}
+
+.height-10 {
+    height: 83.33333333%;
+}
+.height-9 {
+  height: 75%;
+}
+
+.height-8 {
+    height: 66.66666667%;
+}
+
+.height-7 {
+    height: 58.33333333%;
+}
+
+.height-6 {
+    height: 50%;
+}
+
+.height-5 {
+    height: 41.66666667%;
+}
+
+.height-4 {
+    height: 33.33333333%;
+}
+
+.height-3 {
+    height: 25%;
+}
+
+.height-2 {
+    height: 16.66666667%;
+}
+
+.height-1 {
+    height: 8.33333333%;
+}
+
+/* vertical-align */
+.vermid {vertical-align:middle}
+  /* text in image */
+  .container-imgtext {
+    position: relative;
+    margin: 0 auto;
+}
+
+.container-imgtext img {
+    vertical-align: middle;
+}
+
+.container-imgtext .content-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
