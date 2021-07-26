@@ -59,15 +59,21 @@
     position: absolute;
     }
 /* text_img */
+@keyframes timer_text {
+  from {top:0%}
+  to {top: 70%;}
+}
 .text_img_centered {
     position: absolute;
     top: 70%;
     left: 50%;
+    animation-name: timer_text;
+    animation-duration: 3s;
     transform: translate(-50%, -50%);}
 .img_container {
         position: relative;
         text-align: center;
-        color:rgb(243, 247, 7);
+        color:rgb(245, 245, 241);
         font-size:300%;
       }
 /* overlayimg */
