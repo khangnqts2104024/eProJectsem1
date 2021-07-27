@@ -278,7 +278,7 @@
 
 #MENU ul {
   list-style-type: none; 
-  background-color: rgb(31, 30, 30);
+  background-color: black;
   text-align: center;
   font-weight: bold;
   box-shadow:rgb(5, 5, 5) 3px 3px 3px;
@@ -305,19 +305,28 @@
 .sub-menu li{text-align: left;
             top: -1px; 
 }
+/* fix bootstrap */
+.navbar-collapse{padding:0px ;
+  border: none;
+  box-shadow: none;
+  
+            margin: 0px;}
+
 /* min screen */
 @media (max-width: 767px) {
-  #MENU ul {
-    text-align: left;
-  
-  }
   #MENU ul li{text-decoration: none;
                 color: #000;
                 display:block;
+                text-align: left;
+                
   }
   .logomax img {display: none;}
   #MENU .logomin{text-align: center;
-                background-color: black;}
+                background-color: black;
+              }
+
+  .navbar-header{background-color: rgb(0, 0, 0);
+                margin: -1px;}
 }
 /* maxscreen */
 @media (min-width: 768px) {
@@ -330,7 +339,7 @@
     border-bottom-right-radius: 5px ;
 } 
 
-    #MENU>ul>li{text-decoration: none;
+    #MENU #ulmenu>li{text-decoration: none;
       width: 20%;
       display:inline-block;
       position: relative;
