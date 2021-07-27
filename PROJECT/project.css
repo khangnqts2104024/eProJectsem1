@@ -7,7 +7,6 @@
     vertical-align: middle;}
 .infomation {text-align: left;
             margin: 5px;
-            
             }
 /* button submit */
 .button{border-radius: 12px;
@@ -60,8 +59,8 @@
     }
 /* text_img */
 @keyframes timer_text {
-  from {top:0%}
-  to {top: 70%;}
+  from {top:0%; color:rgb(0, 255, 42)}
+  to {top: 70%;color: rgb(245, 245, 241);}
 }
 .text_img_centered {
     position: absolute;
@@ -134,12 +133,14 @@
     transform: scale(0);
     -webkit-transition: .5s ease;
     transition: .5s ease;
+    
   }
   
   .overlayzoom_container:hover .overlayzoom {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+  
   }
   
   /* modal css */
@@ -270,4 +271,74 @@
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+}
+/* menu */
+/* MENU dùng id menu dể tranh cac list khac bi nham*/
+
+
+#MENU ul {
+  list-style-type: none; 
+  background-color: rgb(31, 30, 30);
+  text-align: center;
+  font-weight: bold;
+  box-shadow:rgb(5, 5, 5) 3px 3px 3px;
+      }
+      /* list */
+#MENU>ul>li{text-decoration: none;
+  }
+
+/* canh chinh chu cho đều */
+#MENU a{line-height: 50px;
+  text-decoration: none;
+  color: rgb(40, 213, 243);}
+  /* dau > dể đi  tới element gần nhất ko tính cac element cùng tên khác use for color text in element */
+#MENU li:hover>a{color:rgb(36, 74, 241);}
+/* sub-menu invi */
+.sub-menu{display: none;
+  position: absolute;
+  width: 19vw;
+  word-wrap: normal;
+  z-index: 100;
+}
+/* sub menu  */
+
+.sub-menu li{text-align: left;
+            top: -1px; 
+}
+/* min screen */
+@media (max-width: 767px) {
+  #MENU ul {
+    text-align: left;
+  
+  }
+  #MENU ul li{text-decoration: none;
+                color: #000;
+                display:block;
+  }
+  .logomax img {display: none;}
+  #MENU .logomin{text-align: center;
+                background-color: black;}
+}
+/* maxscreen */
+@media (min-width: 768px) {
+  #MENU li:hover .sub-menu{display:block;
+     border-top:none;
+      border-bottom:2px solid #ddd;
+      border-left: 2px solid #ddd;
+      border-right: 2px solid #ddd;
+      border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px ;
+} 
+
+    #MENU>ul>li{text-decoration: none;
+      width: 20%;
+      display:inline-block;
+      position: relative;
+    vertical-align: bottom;
+    margin: 0 -2px; }
+    .logomax img {
+      width: 60%;}
+    #MENU .logomin{width: 0;}
+    .logomin img {display: none;
+                 }           
 }
