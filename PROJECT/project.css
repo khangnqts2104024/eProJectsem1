@@ -1,3 +1,10 @@
+
+.divimg{padding: 0px;
+        margin: 0px;
+     }
+.divimg img{width: 100%;
+          margin: 0;
+}
 .container-fluid img{width:100%;
   vertical-align: middle;}
 .container img{width: 100%;
@@ -200,7 +207,7 @@
     display: table;
   }
   /* height for div */
-  .maineheight {
+  .mainheight {
     height: 80vh;
 }
 
@@ -292,7 +299,7 @@
   text-decoration: none;
   color: rgb(40, 213, 243);}
   /* dau > dể đi  tới element gần nhất ko tính cac element cùng tên khác use for color text in element */
-#MENU li:hover>a{color:rgb(36, 74, 241);}
+#MENU li:hover>a{color:white;}
 /* sub-menu invi */
 .sub-menu{display: none;
   position: absolute;
@@ -309,8 +316,10 @@
 .navbar-collapse{padding:0px ;
   border: none;
   box-shadow: none;
-  
             margin: 0px;}
+
+            .col-xs-12{padding: 0;
+                      }
 
 /* min screen */
 @media (max-width: 767px) {
@@ -351,3 +360,45 @@
     .logomin img {display: none;
                  }           
 }
+ /* footer */
+ footer{background-color: black;
+        text-align: center;
+      padding: 10px 0px;
+      color: white;
+    font-weight: bold;}
+    .footer-title{ margin: 5px 0px;}
+    .footer-block:hover .footer-title{color: #00bbd3;}
+   footer a:link {
+      
+      color:white;
+    }
+ /* icon */
+ footer img{
+            height: 100%;
+              width: 100%;}
+ .social-icon{margin: 5px;
+              width: 30px;
+              height: 30px;
+              display: inline-block;
+            }
+  /* copyright */
+  .copyright{ margin: auto;
+              color: #00bbd3;
+  }
+  .copyright a{
+    color: #00bbd3;
+    /* text-decoration: none; */
+  }
+/* video  */
+  .video { background-color: black;
+    box-shadow: 3px 3px 3px #00bbd3;} 
+
+
+    /* wave */
+    .blue-overlay{z-index: 50;
+              position: relative;
+    margin-bottom: -5px;
+    margin-top: -100px;
+      
+                  }
+              
