@@ -28,12 +28,16 @@
     }
 /* background color */
 .bg_color{background-color: rgb(215, 234, 245);}
+.bg_color1{background-image:linear-gradient( black,red, orange, yellow);
+            margin-top: 0 px;}
+.bg_color2{background-image: linear-gradient( yellow 25%,red 60% ,black 80%,cyan);
+            }
 /* text color */
 .color{ color: rgb(250, 145, 25);}
 .color1{ color: rgb(66, 47, 236);}
 .color2{ color: rgb(95, 241, 108);}
 .color3{ color: rgb(3, 0, 0);}
-.color4{color: rgb(240, 47, 47);}
+.color4{ color: rgb(255, 255, 255)}
 /* đóng khung lại 1 div */
 .boder{
     border: double;
@@ -138,8 +142,8 @@
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
     
   }
   
@@ -395,7 +399,7 @@
               }
           }
   .social-icon:hover{
-    animation-duration: 2s;
+    animation-duration: 2s ;
     animation-name: iconhover;
     box-shadow: cyan 1px 1px 1px;
                 }          
@@ -430,6 +434,12 @@
                 text-align: center;
                 text-shadow: rgb(122, 121, 120) 2px 1px 1px;
               }
+        .text-whatup{background-color:rgba(255, 255, 255, 0.9);
+        color: rgb(29, 28, 28);
+        padding: 3rem 0rem;
+                text-align: center;
+                text-shadow: rgb(122, 121, 120) 2px 1px 1px;
+              }
       /* img zoom hover */
       @keyframes hover {
         from {
@@ -446,3 +456,35 @@
     .img-hover-zoom:hover{ 
       animation-duration: 2s;
       animation-name: hover;}
+
+      @keyframes hover1 {
+        0% {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(1.07);
+            -ms-transform: scale(1.07);
+            transform: scale(1.07);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+      }
+    }
+      .img-hover-zoom1:hover{ 
+        animation-duration: 3s;
+        animation-name: hover1;
+        }
+      
+        @keyframes hovertext{
+           0% {left: -100%;}
+            100%{left:100%;}
+        }
+        .img-hover-text{overflow: hidden;}
+      .img-hover-text:hover h3{animation-duration: 10s;
+                     animation-name: hovertext;
+                    position: relative;}
+        
