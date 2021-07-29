@@ -62,7 +62,7 @@
 
 /* HOVER IMG */
 .img_invi{display: none;
-    position: absolute;
+   
     }
 /* text_img */
 @keyframes timer_text {
@@ -363,7 +363,7 @@
  /* footer */
  footer{background-color: black;
         text-align: center;
-      padding: 10px 0px;
+      padding: 50px 0px 10px 0px;
       color: white;
     font-weight: bold;}
     .footer-title{ margin: 5px 0px;}
@@ -381,6 +381,24 @@
               height: 30px;
               display: inline-block;
             }
+
+   @keyframes iconhover {
+   from {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+              }
+    to {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+              }
+          }
+  .social-icon:hover{
+    animation-duration: 2s;
+    animation-name: iconhover;
+    box-shadow: cyan 1px 1px 1px;
+                }          
   /* copyright */
   .copyright{ margin: auto;
               color: #00bbd3;
@@ -399,6 +417,32 @@
               position: relative;
     margin-bottom: -5px;
     margin-top: -100px;
-      
                   }
-              
+        /* more and more */
+    .more-img{height: 170px;}
+
+    .img-hover:hover{top:-3px;
+      box-shadow: #00bbd3 4px 5px 4px}
+      /* text in homepage */
+      .text-home{background-color:rgb(193, 239, 247);
+        color: rgb(29, 28, 28);
+        padding: 2rem ;
+                text-align: center;
+                text-shadow: rgb(122, 121, 120) 2px 1px 1px;
+              }
+      /* img zoom hover */
+      @keyframes hover {
+        from {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        to {
+            -webkit-transform: scale(1.01);
+            -ms-transform: scale(1.01);
+            transform: scale(1.01);
+        }
+    }
+    .img-hover-zoom:hover{ 
+      animation-duration: 2s;
+      animation-name: hover;}
