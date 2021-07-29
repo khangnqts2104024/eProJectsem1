@@ -54,9 +54,9 @@
     }
 /* chỉnh margin 1-5 1=20px */
 .m-0{margin: 0;}
-.m-1{margin: 2rem 0rem 1rem 0rem;}
-.m-2{margin: 4rem 0rem 1rem 0rem;}
-.m-3{margin: 6rem 0rem 1rem 0rem;}
+.m-1{margin: 2rem 0rem 0rem 0rem;}
+.m-2{margin: 4rem 0rem 0rem 0rem;}
+.m-3{margin: 6rem 0rem 0rem 0rem;}
 .m-4{margin: 8rem 0rem 1rem 0rem;}
 .m-5{margin: 10rem 0rem 1rem 0rem;}
 
@@ -363,7 +363,7 @@
  /* footer */
  footer{background-color: black;
         text-align: center;
-      padding: 50px 0px 10px 0px;
+      padding: 20px 0px 10px 0px;
       color: white;
     font-weight: bold;}
     .footer-title{ margin: 5px 0px;}
