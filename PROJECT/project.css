@@ -8,7 +8,7 @@
 .container-fluid img{width:100%;
   vertical-align: middle;}
 .container img{width: 100%;
-      height: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     vertical-align: middle;}
@@ -34,9 +34,9 @@
             }
 /* text color */
 .color{ color: rgb(250, 145, 25);}
-.color1{ color: rgb(66, 47, 236);}
+.color1{ color: rgba(41, 17, 253, 0.8);}
 .color2{ color: rgb(95, 241, 108);}
-.color3{ color: rgb(3, 0, 0);}
+.color3{ color: rgb(230, 59, 193,0.8);}
 .color4{ color: rgb(255, 255, 255)}
 /* đóng khung lại 1 div */
 .boder{
@@ -46,7 +46,7 @@
 
 /* tao chu bu đổ bóng  */
 .shadow{
-        text-shadow: gray 3px 3px 3px;
+        text-shadow: gray 2px 2px 2px;
         text-transform: capitalize;}
 /* title */
 .title_text{  text-align: center;
@@ -432,13 +432,13 @@
         color: rgb(29, 28, 28);
         padding: 2rem ;
                 text-align: center;
-                text-shadow: rgb(122, 121, 120) 2px 1px 1px;
+                
               }
         .text-whatup{background-color:rgba(255, 255, 255, 0.9);
         color: rgb(29, 28, 28);
         padding: 3rem 0rem;
                 text-align: center;
-                text-shadow: rgb(122, 121, 120) 2px 1px 1px;
+              
               }
       /* img zoom hover */
       @keyframes hover {
