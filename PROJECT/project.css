@@ -442,19 +442,24 @@
               }
       /* img zoom hover */
       @keyframes hover {
-        from {
+        0% {
             -webkit-transform: scale(1);
             -ms-transform: scale(1);
             transform: scale(1);
         }
-        to {
-            -webkit-transform: scale(1.01);
-            -ms-transform: scale(1.01);
-            transform: scale(1.01);
+        50% {
+            -webkit-transform: scale(1.03);
+            -ms-transform: scale(1.03);
+            transform: scale(1.03);
         }
+        100% {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+      }
     }
     .img-hover-zoom:hover{ 
-      animation-duration: 2s;
+      animation-duration: 4s;
       animation-name: hover;}
 
       @keyframes hover1 {
