@@ -425,7 +425,7 @@
         /* more and more */
     .more-img{height: 170px;}
 
-    .img-hover:hover{top:-3px;
+    .img-hover:hover{top:-1px;
       box-shadow: #00bbd3 4px 5px 4px}
       /* text in homepage */
       .text-home{background-color:rgb(193, 239, 247);
