@@ -10,6 +10,14 @@
     <script src="../PROJECT/bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
     <script src="../PROJECT/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../PROJECT/project.css">
+    <style>
+        .test {
+            margin: auto;
+          
+
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body style="background-color: rgb(252, 252, 252)">
@@ -56,7 +64,72 @@
         </nav>
     </div>
 
-
+    <div class="container-fluid">
+        <div class="col-xs-6 col-md-4 col-lg-3 boder">
+            <div id="allcheckbox">
+                <label>
+                    <input class="tick area" id="allchecked" type="checkbox" value="">
+                    All
+                </label>
+            </div>
+            <div class="subcheckbox boder">
+                <label>
+                    <input class="tick area" type="checkbox" value="1">
+                    High-tech Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="2">
+                    Petra Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="3">
+                    Great Wall Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="4">
+                    Colosseum Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="5">
+                    Chichén Itzá Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="6">
+                    Cristo Redentor Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="7">
+                    Machupichu Land
+                </label>
+                <br>
+                <label>
+                    <input class="tick area" type="checkbox" value="8">
+                    TajMahal Land
+                </label>
+            </div>
+            <div class="subcheckbox boder">
+                <label>
+                    <input class="tick LandD" type="checkbox" value="lei">
+                    Leisure
+                </label>
+                <br>
+                <label>
+                    <input class="tick LandD" type="checkbox" value="din">
+                    Dinning
+                </label>
+            </div>
+        </div>
+        <!-- show here -->
+        <div id="main" class="col-xs-6 col-md-8 col-lg-9" style="min-height: 80vh;"> 
+        carousel
+        </div>
+    </div>
 
 
 
@@ -95,7 +168,7 @@
                     <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> : +84 703321123
                 </p>
             </div>
-        </div>
+        </div >
 
         <div class="copyright">
             <br>
@@ -106,7 +179,73 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function () {
+            var all = document.getElementById("allchecked");
+            var listcheck = document.getElementsByClassName("area");
+            var listLD = document.getElementsByClassName("LandD");
 
+            // getjson
+            var url = "ds.json";
+            $.getJSON(url, function (data) {
+                // checkjson
+                // console.log(data);
+
+                // checkbox all
+                $("#allchecked").change(function () {
+                    if (all.checked === true) {
+                        for (let a = 0; a < listcheck.length; a++) {
+                            listcheck[a].checked = true;
+                        }
+                    }
+                });
+                // function to get info from json
+                $(".tick").change(function () {
+                    var product = [];
+                    var filter = new Set();
+                    var count=0;
+
+                    for (let a = 0; a < listcheck.length; a++) {
+                        for (let b = 0; b < listLD.length; b++) {
+                            if (listcheck[a].checked === true && listLD[b].checked===true){
+                                data.forEach(item => {
+                                    if (item.class === listcheck[a].value && item.ld===listLD[b].value){
+                                      filter.add(item);count+=1;
+                                    }
+                                });
+                            }
+                            // 
+                            else if (listcheck[a].checked === true && listLD[b].checked===false) {
+                                data.forEach(item => {
+                                    if (item.class === listcheck[a].value && item.ld!==listLD[b].value){
+                                        filter.add(item);count+=1;
+                                    }
+                                });
+                            }
+                            else { all.checked = false; }
+                        }
+                    }
+                    if (count===0){for(let b = 0; b < listLD.length; b++){
+                        if(listLD[b].checked===true){
+                            data.forEach(item => {
+                            if(item.ld==listLD[b].value){
+                            filter.add(item)};})
+                        }
+                    }}
+
+
+                    // check console var filter
+                             // console.log(filter);
+                    // collect product
+                    filter.forEach(info=>{product.push(`<div class="test">  ${info.name}a </div>`)});
+                //   show carosel when no product filter
+                    if (product.length == 0) { product.push(`con gi nua dau ma khoc voi sau`) }
+                    // show in html
+                    $("#main").html(product.join("+"));
+                });
+            })
+        });
+    </script>
 
 </body>
 
