@@ -42,6 +42,7 @@
             float: left;
             margin-right: 15px;
         }
+        #carouselLD img{height: 43rem;}
     </style>
 </head>
 
@@ -90,7 +91,9 @@
     </div>
 
     <div class="container-fluid">
-        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2 category m-2">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 category m-2">
+            <h4>Category:</h4>
+            <hr>
             <div id="allcheckbox">
                 <label>
                     <input class="tick area" id="allchecked" type="checkbox" value="">
@@ -153,27 +156,57 @@
             </div>
         </div>
         <!-- show here -->
-        <div id="main" class="col-xs-6 col-md-8 col-lg-9" style="min-height: 80vh;">
+        <div id="main" class="col-xs-12 col-sm-9 col-md-9 col-lg-10" style="min-height: 80vh;">
             <!--  -->
-            <div class="card">
-                <div class="card_img">
-                    <img src="../PROJECT/img/imgdinning/brazil4.jpg" alt="">
+           
+            <!--  -->
+            <!-- carousel -->
+            
+            <div id="carouselLD" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselLD" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="1" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="1" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img  alt="" src="../PROJECT/img/imgdinning/italy4.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Taste a real Italian Pizza</h1> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../PROJECT/img/imgdinning/india4.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Taste delicious dessert</h1>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img  alt="" src="../PROJECT/img/imgdinning/china7luxresort.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Experience mysterious China life</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <img  alt="" src="../PROJECT/img/imgdinning/hightech3tonyhotel.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>To be a real life iron man</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cardinfo">
-                    <div>
-                        <h2>name</h2>
-                    </div>
-                    <div>
-                        <p>$19.99</p>
-                        <p>location</p>
-                    </div>
-                    <div>
-                        <p class="comment">info</p>
-                    </div>
-                </div>
+                <a class="left carousel-control" href="#carouselLD" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#carouselLD" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
             <!--  -->
-
         </div>
     </div>
 
@@ -300,7 +333,7 @@
                         <h2>${info.name}</h2>
                     </div>
                     <div>
-                        <p>Price: $${info.price}</p>
+                        <p class="price">Price: $${info.price}</p>
                         <p>Location: ${info.location}</p>
                     </div>
                     <div>
@@ -312,11 +345,54 @@
                             // end
                         )
                     });
-                    //   show carosel when no product filter
+                    //   show carousel when no product filter
                     if (product.length == 0) {
                         product.push(
                             // start
-                            `con gi nua dau ma khoc voi sau`
+                            `<div id="carouselLD" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselLD" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="1" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="1" class=""></li>
+                    <li data-target="#carouselLD" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img  alt="" src="../PROJECT/img/imgdinning/italy4.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Taste a real Italian Pizza</h1> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../PROJECT/img/imgdinning/india4.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Taste delicious dessert</h1>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img  alt="" src="../PROJECT/img/imgdinning/china7luxresort.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Experience mysterious China life</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <img  alt="" src="../PROJECT/img/imgdinning/hightech3tonyhotel.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>To be a real life iron man</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carouselLD" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#carouselLD" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>`
                             // end
                         )
                     }
