@@ -21,6 +21,7 @@
             padding-top: 50px;
             padding-bottom: 50px;
             background-color: rgb(135, 127, 182);
+            min-width: 40rem
         }
 
         .spad1 {
@@ -97,8 +98,8 @@
             padding: 10px 33px;
             display: inline-block;
             /* cái này là tiền tố cho nó ăn ở Chorm và Safari */
-            background: -webkit-gradient(linear,left top,right top,from(#d2ee33),to(#06f025));
-                    
+            background: -webkit-gradient(linear, left top, right top, from(#d2ee33), to(#06f025));
+
             /* cái này là tiền tố cho nó ăn ở opera */
             background: -o-linear-gradient(left, #d2ee3e, #06f025);
             /* background: linear-gradient(to right, #d2ee33, #06f025); */
@@ -107,7 +108,7 @@
         }
 
         .btn {
-            width: 35rem;
+            min-width: 35rem;
         }
 
         .btn:after {
@@ -124,8 +125,17 @@
         }
 
         .button-margin {
-            margin: 10px 0px
+            margin-top:10px;
         }
+        .button_container{text-align: center;
+                            padding: 0rem 1rem;
+                            margin: 0px;
+                            }
+        .btn-info{width: 100%;
+                    word-wrap: break-word;
+                    }
+    .collapse{border: solid thin rgb(150, 143, 190);
+            background-color:rgb(150, 143, 190) ;}
     </style>
 
 </head>
@@ -175,28 +185,26 @@
     </div>
 
     <div class="container-fluid">
-
         <img src="../PROJECT/img/contact/contactus.jpg" class="img-responsive" alt="Image">
-
     </div>
     <!-- question section -->
     <div class="container spad">
         <div style="font-size: 3rem; color: white; font-weight: bolder;">
             <p>Frequently asked questions</p>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 button_container">
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap1">Where can I book tickets???</button>
                 <div id="collap1" class="collapse">
                     <p style="color: white; font-size: 20px;">We have online booking system, you can also send inquiry
                         to our Email, our staff will contact you
                     </p>
-
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap2">How many people can I bring?</button>
                 <div id="collap2" class="collapse">
@@ -204,9 +212,9 @@
                         We have no limit on the number of members to visit
                     </p>
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap3">Are the games safe?</button>
                 <div id="collap3" class="collapse">
@@ -214,83 +222,83 @@
                         We always ensure all factors of safety for visitors, you are always guaranteed in all aspects
                     </p>
                 </div>
-
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap4">Can I book a shuttle to the park?</button>
                 <div id="collap4" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We have a shuttle bus system, you just need to contact us in advance
-
                     </p>
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap5">Can I book a package trip?</button>
                 <div id="collap5" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We always have interesting travel packages, you can refer to the forum
-
                     </p>
-
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 button_container">
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap6">Can you help me organize a date?</button>
                 <div id="collap6" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We have romantic scenes you will win his/her heart
-
                     </p>
                 </div>
-
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+
+
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap7">Can I stay overnight at the park?</button>
                 <div id="collap7" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We have a modern hotel system with many facilities for families
-
                     </p>
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
                     data-target="#collap8">Can you babysit our kids?</button>
                 <div id="collap8" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We hope you will spend more time with your family, we do not have babysitting service
-
                     </p>
-
                 </div>
-
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+
+            <!--  -->
+            <div class="button-margin">
                 <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
-                    data-target="#collap9">Do you have an interpreter?</button>
+                    data-target="#collap9">Do
+                    you have an interpreter?</button>
                 <div id="collap9" class="collapse">
                     <p style="color: white; font-size: 20px;">
                         We will assist you when you have a request, we will try to help you have the best experience
                         here
-
                     </p>
                 </div>
-
+            </div>
+            <!--  -->
+            <div class="button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap10">Do you want to join with us?</button>
+                <div id="collap10" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        If you want to apply for a job please download form, and sent us by email or in ours head office
+                    </p>
+                    <a style="color:rgb(64, 240, 28);font-size: 18px; " href="../PROJECT/img/contact/job.docx">download here</a>
+                </div>
             </div>
         </div>
-
     </div>
     <!-- Contact Section Begin -->
     <section class="contact-section spad1">
