@@ -1392,13 +1392,13 @@ if (typeof jQuery === 'undefined') {
       return sanitizeFn(unsafeHtml)
     }
 
-    // IE 8 and below don't support createhtmlDocument
-    if (!document.implementation || !document.implementation.createhtmlDocument) {
+    // IE 8 and below don't support createHTMLDocument
+    if (!document.implementation || !document.implementation.createHTMLDocument) {
       return unsafeHtml
     }
 
-    var createdDocument = document.implementation.createhtmlDocument('sanitization')
-    createdDocument.body.innerhtml = unsafeHtml
+    var createdDocument = document.implementation.createHTMLDocument('sanitization')
+    createdDocument.body.innerHTML = unsafeHtml
 
     var whitelistKeys = $.map(whiteList, function (el, i) { return i })
     var elements = $(createdDocument.body).find('*')
@@ -1423,7 +1423,7 @@ if (typeof jQuery === 'undefined') {
       }
     }
 
-    return createdDocument.body.innerhtml
+    return createdDocument.body.innerHTML
   }
 
   // TOOLTIP PUBLIC CLASS DEFINITION
