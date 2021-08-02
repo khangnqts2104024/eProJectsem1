@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-                    <h3 class="color">LET SING</h3>
+                    <h3 class="color1">LET SING</h3>
                     <h3 class="vermid">World Singing Day is the global sing-along for everyone.</h3>
                 </div>
             </div>
@@ -161,7 +161,7 @@
 
     <footer class="m-2">
         <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
                 <div class="footer-title">CONNECT US</div>
                 <div class="social-icon"><a href="https://www.facebook.com/funzone.vn" target="_blank">
                         <img src="../PROJECT/img/imghome/fbicon.png" alt="facebook"></a>
@@ -173,7 +173,7 @@
                         <img src="../PROJECT/img/imghome/twitericon.png" alt="twitter"></a>
                 </div>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
                 <div class="footer-title">KNOW MORE ABOUT US</div>
                 <div class="social-icon"><a href="https://www.youtube.com/watch?v=7Dbuc6vIRnE" target="_blank">
                         <img src="../PROJECT/img/imghome/yticon.png" alt="youtube"></a>
@@ -183,7 +183,7 @@
                         <img src="../PROJECT/img/imghome/tiltokicon.png" alt="tiktok"></a>
                 </div>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
                 <div class="footer-title">CONTACT US</div>
                 <p>Email
                     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> : <a
@@ -206,13 +206,14 @@
 
     <script>
         // Set the date counting down
-        var countDownDate = new Date("Sep 1, 2021 21:00:00").getTime();
+        var countDownDate = new Date("Sep 30, 2021 21:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
 
             // Get today's date and time
             var now = new Date().getTime();
+            
 
             // Find the distance between now and the count down date( by secornds)
             var distance = countDownDate - now;
@@ -224,13 +225,13 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Output the result
-            document.getElementById("timer").innerhtml = days + "d " + hours + "h "
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ";
 
             // exoired when the count down is over
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("timer").innerhtml = "EXPIRED";
+                document.getElementById("timer").innerHTML = "EXPIRED";
             }
         }, 1000);
         // 1000=1s setInterval function use for show epression everyevery interval(here is 1000)
