@@ -11,11 +11,36 @@
     <script src="../PROJECT/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../PROJECT/project.css">
     <style>
-        .test {
-            margin: auto;
-          
+        #main {
+            border: solid thin rgb(224, 220, 220);
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
 
-            display: inline-block;
+
+        .card {
+            min-height: 250px;
+            max-height: 350px;
+            border-bottom: solid thin gainsboro;
+            text-align: left;
+            font-family: arial;
+            margin: 5px;
+
+        }
+
+        .card_img img {
+            width: 100%;
+            height: 100%;
+            border: solid 1px;
+            float: left;
+        }
+
+        .card_img {
+            width: 200px;
+            height: 200px;
+            border: solid thin;
+            float: left;
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -65,55 +90,57 @@
     </div>
 
     <div class="container-fluid">
-        <div class="col-xs-6 col-md-4 col-lg-3 boder">
+        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2 category m-2">
             <div id="allcheckbox">
                 <label>
                     <input class="tick area" id="allchecked" type="checkbox" value="">
                     All
                 </label>
             </div>
-            <div class="subcheckbox boder">
+            <hr>
+            <div class="subcheckbox">
                 <label>
-                    <input class="tick area" type="checkbox" value="1">
+                    <input class="tick area" type="checkbox" value="Hightech">
                     High-tech Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="2">
+                    <input class="tick area" type="checkbox" value="Jodan">
                     Petra Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="3">
+                    <input class="tick area" type="checkbox" value="China">
                     Great Wall Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="4">
+                    <input class="tick area" type="checkbox" value="Italy">
                     Colosseum Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="5">
+                    <input class="tick area" type="checkbox" value="Mexico">
                     Chichén Itzá Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="6">
+                    <input class="tick area" type="checkbox" value="Brazil">
                     Cristo Redentor Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="7">
+                    <input class="tick area" type="checkbox" value="Peru">
                     Machupichu Land
                 </label>
                 <br>
                 <label>
-                    <input class="tick area" type="checkbox" value="8">
+                    <input class="tick area" type="checkbox" value="India">
                     TajMahal Land
                 </label>
             </div>
-            <div class="subcheckbox boder">
+            <hr>
+            <div class="subcheckbox">
                 <label>
                     <input class="tick LandD" type="checkbox" value="lei">
                     Leisure
@@ -126,8 +153,27 @@
             </div>
         </div>
         <!-- show here -->
-        <div id="main" class="col-xs-6 col-md-8 col-lg-9" style="min-height: 80vh;"> 
-        carousel
+        <div id="main" class="col-xs-6 col-md-8 col-lg-9" style="min-height: 80vh;">
+            <!--  -->
+            <div class="card">
+                <div class="card_img">
+                    <img src="../PROJECT/img/imgdinning/brazil4.jpg" alt="">
+                </div>
+                <div class="cardinfo">
+                    <div>
+                        <h2>name</h2>
+                    </div>
+                    <div>
+                        <p>$19.99</p>
+                        <p>location</p>
+                    </div>
+                    <div>
+                        <p class="comment">info</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
         </div>
     </div>
 
@@ -168,7 +214,7 @@
                     <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> : +84 703321123
                 </p>
             </div>
-        </div >
+        </div>
 
         <div class="copyright">
             <br>
@@ -203,45 +249,79 @@
                 $(".tick").change(function () {
                     var product = [];
                     var filter = new Set();
-                    var count=0;
+                    var count = 0;
 
                     for (let a = 0; a < listcheck.length; a++) {
                         for (let b = 0; b < listLD.length; b++) {
-                            if (listcheck[a].checked === true && listLD[b].checked===true){
+                            if (listcheck[a].checked === true && listLD[b].checked === true) {
                                 data.forEach(item => {
-                                    if (item.class === listcheck[a].value && item.ld===listLD[b].value){
-                                      filter.add(item);count+=1;
+                                    if (item.class === listcheck[a].value && item.ld === listLD[b].value) {
+                                        filter.add(item); count += 1;
                                     }
                                 });
                             }
                             // 
-                            else if (listcheck[a].checked === true && listLD[b].checked===false) {
+                            else if (listcheck[a].checked === true && listLD[b].checked === false) {
                                 data.forEach(item => {
-                                    if (item.class === listcheck[a].value && item.ld!==listLD[b].value){
-                                        filter.add(item);count+=1;
+                                    if (item.class === listcheck[a].value && item.ld !== listLD[b].value) {
+                                        filter.add(item); count += 1;
                                     }
                                 });
                             }
                             else { all.checked = false; }
                         }
                     }
-                    if (count===0){for(let b = 0; b < listLD.length; b++){
-                        if(listLD[b].checked===true){
-                            data.forEach(item => {
-                            if(item.ld==listLD[b].value){
-                            filter.add(item)};})
+                    if (count === 0) {
+                        for (let b = 0; b < listLD.length; b++) {
+                            if (listLD[b].checked === true) {
+                                data.forEach(item => {
+                                    if (item.ld == listLD[b].value) {
+                                        filter.add(item)
+                                    };
+                                })
+                            }
                         }
-                    }}
+                    }
 
 
                     // check console var filter
-                             // console.log(filter);
+                    // console.log(filter);
                     // collect product
-                    filter.forEach(info=>{product.push(`<div class="test">  ${info.name}a </div>`)});
-                //   show carosel when no product filter
-                    if (product.length == 0) { product.push(`con gi nua dau ma khoc voi sau`) }
+                    filter.forEach(info => {
+                        product.push(
+                            // html code for product
+
+                            `<div class="card">
+                <div class="card_img">
+                    <img src="${info.img}" alt="">
+                </div>
+                <div class="cardinfo">
+                    <div>
+                        <h2>${info.name}</h2>
+                    </div>
+                    <div>
+                        <p>Price: $${info.price}</p>
+                        <p>Location: ${info.location}</p>
+                    </div>
+                    <div>
+                        <p class="comment">About: info</p>
+                    </div>
+                </div>
+            </div>`
+
+                            // end
+                        )
+                    });
+                    //   show carosel when no product filter
+                    if (product.length == 0) {
+                        product.push(
+                            // start
+                            `con gi nua dau ma khoc voi sau`
+                            // end
+                        )
+                    }
                     // show in html
-                    $("#main").html(product.join("+"));
+                    $("#main").html(product.join(""));
                 });
             })
         });
