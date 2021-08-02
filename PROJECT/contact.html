@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="../PROJECT/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../PROJECT/bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../PROJECT/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../PROJECT/project.css">
+    <style>
+        .map {
+            height: 612px;
+            position: relative;
+
+        }
+
+        .spad {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: rgb(135, 127, 182);
+        }
+
+        .spad1 {
+            padding-top: 50px;
+            padding-bottom: 20px;
+
+        }
+
+        .contact-info h4 {
+            font-weight: 100;
+            font-weight: bolder;
+            color: #111111;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+
+        .contact-info .contact-address .contact-widget {
+            overflow: hidden;
+            margin-bottom: 100 px;
+        }
+
+        .contact-text,
+        h5 {
+            font-size: 15px;
+            color: rgb(71, 58, 190);
+            font-weight: bolder;
+        }
+
+        .contact-icon {
+            height: 74px;
+            width: 74px;
+            border: 1px solid #ebebeb;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 74px;
+            float: left;
+            margin-right: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form h4 {
+
+            font-weight: 700;
+            color: #111111;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+        }
+
+        .contact-form form input {
+            width: 100%;
+            height: 51px;
+            border: 1px solid #e1e1e1;
+            padding-left: 20px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .contact-form form textarea {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #e1e1e1;
+            padding-left: 20px;
+            font-size: 16px;
+            padding-top: 10px;
+            margin-bottom: 42px;
+            resize: none;
+        }
+
+        .contact-form form button {
+            font-weight: bolder;
+            font-size: 14px;
+            color: #944a4a;
+            padding: 10px 33px;
+            display: inline-block;
+            /* cái này là tiền tố cho nó ăn ở Chorm và Safari */
+            background: -webkit-gradient(linear,left top,right top,from(#d2ee33),to(#06f025));
+                    
+            /* cái này là tiền tố cho nó ăn ở opera */
+            background: -o-linear-gradient(left, #d2ee3e, #06f025);
+            /* background: linear-gradient(to right, #d2ee33, #06f025); */
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            width: 35rem;
+        }
+
+        .btn:after {
+            font-family: "Glyphicons Halflings";
+            content: "\e114";
+            float: right;
+            margin-left: 15px;
+
+        }
+
+        .btn.collapsed:after {
+            content: "\e080";
+
+        }
+
+        .button-margin {
+            margin: 10px 0px
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="MENU">
+        <div class="logomin"><a href="../PROJECT/index.html"><img src="../PROJECT/img/imghome/logo-funzone-2.png"
+                    alt=""></a></div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button style="background-color: rgb(40, 213, 243);" type="button" class="navbar-toggle"
+                    data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="ulmenu" style="text-transform: uppercase;">
+                    <li><a href="../PROJECT/Whatup.html">WHAT UP</a></li>
+                    <li><a href="../PROJECT/EXPRIENCE.HTML">EXPERIENCE</a>
+                        <ul class="sub-menu">
+                            <li><a href=""> modern land </a></li>
+                            <li><a href="../PROJECT/Chiche.html"> Chichén Itzá </a></li>
+                            <li><a href="../PROJECT/colosseum.html"> Colosseum </a></li>
+                            <li><a href="../PROJECT/Cristo.html"> Cristo Redentor </a></li>
+                            <li><a href="../PROJECT/GreatWall.html"> Great Wall </a></li>
+                            <li><a href="../PROJECT/Machipichu.html"> MachuPichu </a></li>
+                            <li><a href="../PROJECT/Petra.html"> Petra </a></li>
+                            <li><a href="../PROJECT/Tajmaha.html"> Taj Mahal </a></li>
+                        </ul>
+                    </li>
+                    <li class="logomax"><a href="../PROJECT/index.html"><img
+                                src="../PROJECT/img/imghome/logo-funzone-2.png" alt=""></a></li>
+                    <li><a href="../PROJECT/leisureDinning.html">LEISURE & DINNING</a>
+                    </li>
+                    <li><a href="">ABOUT US</a>
+                        <ul class="sub-menu">
+                            <li><a href="../PROJECT/contact.html">CONTACT US</a></li>
+                            <li><a href="../PROJECT/business.html">BUSINESS OPPORTUNITIES</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+
+        <img src="../PROJECT/img/contact/contactus.jpg" class="img-responsive" alt="Image">
+
+    </div>
+    <!-- question section -->
+    <div class="container spad">
+        <div style="font-size: 3rem; color: white; font-weight: bolder;">
+            <p>Frequently asked questions</p>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap1">Where can I book tickets???</button>
+                <div id="collap1" class="collapse">
+                    <p style="color: white; font-size: 20px;">We have online booking system, you can also send inquiry
+                        to our Email, our staff will contact you
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap2">How many people can I bring?</button>
+                <div id="collap2" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We have no limit on the number of members to visit
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap3">Are the games safe?</button>
+                <div id="collap3" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We always ensure all factors of safety for visitors, you are always guaranteed in all aspects
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap4">Can I book a shuttle to the park?</button>
+                <div id="collap4" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We have a shuttle bus system, you just need to contact us in advance
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap5">Can I book a package trip?</button>
+                <div id="collap5" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We always have interesting travel packages, you can refer to the forum
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap6">Can you help me organize a date?</button>
+                <div id="collap6" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We have romantic scenes you will win his/her heart
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap7">Can I stay overnight at the park?</button>
+                <div id="collap7" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We have a modern hotel system with many facilities for families
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap8">Can you babysit our kids?</button>
+                <div id="collap8" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We hope you will spend more time with your family, we do not have babysitting service
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 button-margin">
+                <button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse"
+                    data-target="#collap9">Do you have an interpreter?</button>
+                <div id="collap9" class="collapse">
+                    <p style="color: white; font-size: 20px;">
+                        We will assist you when you have a request, we will try to help you have the best experience
+                        here
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4>Contacts Us</h4>
+                        <div class="contact-address">
+                            <div class="contact-widget">
+                                <div class="contact-icon">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Our Location</h5>
+                                    <p>590 CMT8 Street District 3 Ho Chi Minh City</p>
+                                </div>
+                            </div>
+                            <div class="contact-widget">
+                                <div class="contact-icon">
+                                    <span class="glyphicon glyphicon-phone-alt"></span>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Phone:</h5>
+                                    <p>+65 11.188.888</p>
+                                </div>
+                            </div>
+                            <div class="contact-widget">
+                                <div class="contact-icon">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Mail</h5>
+                                    <p><a href="mailto:Aibietlaai@gmail.com?Subject=Hello!">aibietlaai@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" style="background-color: rgb(121, 179, 159);">
+                    <div class="contact-form">
+                        <h4>Leave A Comment</h4>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Your name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Your email">
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea placeholder="Your messages"></textarea>
+                                    <button type="submit" onclick="myFunction()">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- map -->
+    <div class="container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.505812583913!2d106.66935836076084!3d10.782452376116384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2zRlBUIEFwdGVjaCBIQ00gLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1627707276299!5m2!1svi!2s"
+            width="100%" height="400" style="border:solid thin;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer class="m-2">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">CONNECT US</div>
+                <div class="social-icon"><a href="https://www.facebook.com/funzone.vn" target="_blank">
+                        <img src="../PROJECT/img/imghome/fbicon.png" alt="facebook"></a>
+                </div>
+                <div class="social-icon"><a href="https://www.instagram.com/" target="_blank">
+                        <img src="../PROJECT/img/imghome/instagramicon.png" alt="instagram"></a>
+                </div>
+                <div class="social-icon"><a href="https://twitter.com/?lang=en" target="_blank">
+                        <img src="../PROJECT/img/imghome/twitericon.png" alt="twitter"></a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">KNOW MORE ABOUT US</div>
+                <div class="social-icon"><a href="https://www.youtube.com/watch?v=7Dbuc6vIRnE" target="_blank">
+                        <img src="../PROJECT/img/imghome/yticon.png" alt="youtube"></a>
+                </div>
+                <div class="social-icon">
+                    <a href="https://www.tiktok.com/en/" target="_blank">
+                        <img src="../PROJECT/img/imghome/tiltokicon.png" alt="tiktok"></a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">CONTACT US</div>
+                <p>Email
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> : <a
+                        href="mailto:khangkhangbl101@gmail.com">khangkhangbl101@gmail.com</a>
+                </p>
+                <p>Hotline
+                    <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> : +84 703321123
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <br>
+            <p> Copyright &copy; 2021 Funzone park</p>
+
+            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="">KTN group</a></p>
+
+        </div>
+    </footer>
+    <!-- script -->
+
+</body>
