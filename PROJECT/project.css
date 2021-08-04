@@ -557,7 +557,7 @@ body{font-family: Arial, Helvetica, sans-serif;}
 
 .ironman_heart:hover {
   animation-name: hover1;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   text-shadow: cornsilk 1px 0px 5px;
 }
@@ -565,40 +565,34 @@ body{font-family: Arial, Helvetica, sans-serif;}
 
 @keyframes iromanheart {
   0% {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
+      -webkit-transform: scale(.99);
+      -ms-transform: scale(.99);
+      transform: scale(.99);
   }
 
-  2% {
-      -webkit-transform: scale(.9);
-      -ms-transform: scale(.9);
-      transform: scale(.9);
-  }
 
-  5% {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-  }
-
-  9% {
+  20% {
       -webkit-transform: scale(1.04);
       -ms-transform: scale(1.04);
       transform: scale(1.04);
   }
 
-  15% {
+  30% {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
       transform: scale(0.9);
   }
 
-  40% {
+  45% {
       -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
       transform: scale(1.15);
   }
+  50% {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
 
   100% {
       -webkit-transform: scale(0);
@@ -638,7 +632,7 @@ body{font-family: Arial, Helvetica, sans-serif;}
   animation-duration: 6s;
   display: none;
   animation-timing-function: ease;
-
+  border:solid thin #1C9BDD;
 }
 
 .irontitle_container {
@@ -794,20 +788,23 @@ body{font-family: Arial, Helvetica, sans-serif;}
   top: 0%;
   right: 0%;
   z-index: 10;
-  animation-name: sipderman;
+  /* use jvs */
+  /* animation-name: sipderman;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
   display: none;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
-
-.spiderman_container:hover {
-  animation: hover1;
+/* 
+ .spiderman_container{
+  animation: hover1 ;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-}
+  
+} */
 
 .spiderbackground {
+  border:solid thin #1C9BDD;
   width: 100%;
   height: 100%;
 }
