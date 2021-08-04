@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../PROJECT/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../PROJECT/bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../PROJECT/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../PROJECT/project.css">
+    <style>
+        body {
+            background-color: midnightblue;
+            color: white;
+        }
+
+        .ironno1_container img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ironno1_container {
+            position: relative;
+
+            text-align: center;
+            overflow: hidden;
+            height: 50rem;
+        }
+
+        .ironman_heart {
+            top: 35%;
+            position: absolute;
+        }
+
+        .ironman_heart:hover {
+            animation-name: hover1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes iromanheart {
+            from {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+            }
+
+            to {
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                transform: scale(0);
+
+            }
+
+        }
+
+        /* click */
+
+
+        .ironman_container {
+            max-width: 200px;
+            max-height: 500px;
+            position: absolute;
+            bottom: 0%;
+            z-index: 10;
+            animation-name: ironman;
+            animation-duration: 7s;
+            animation-timing-function: ease;
+            display: none;
+            animation-fill-mode: forwards;
+        }
+
+        .ironno1_container:hover .irontitle_container {
+            right: 0%;
+        }
+
+        .ironbackground_container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+            animation-name: bg_ironman;
+            animation-duration: 6s;
+            display: none;
+            animation-timing-function: ease;
+
+        }
+
+        .irontitle_container {
+            background-color: gold;
+            z-index: 10;
+            position: absolute;
+            height: 7rem;
+            text-align: center;
+            width: 50%;
+            top: 80%;
+            right: 0%;
+            border: solid thin rgb(155, 32, 32);
+            box-shadow: rgb(240, 234, 234) 3px 3px 10px;
+            right: -100%;
+            transition: 1s ease;
+            display: none;
+
+        }
+
+        .irontitle_container p {
+            line-height: 7rem;
+            font-size: 2rem;
+        }
+
+        @keyframes ironman {
+            0% {
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                bottom: 100%;
+            }
+            80%{ -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);}
+            100% {
+                bottom: 0%;
+            }
+        }
+
+        @keyframes bg_ironman {
+            0% {
+                left: 100%;
+            }
+
+            20% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="MENU">
+        <div class="logomin"><a href="../PROJECT/index.html"><img src="../PROJECT/img/imghome/logo-funzone-2.png"
+                    alt=""></a></div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button style="background-color: rgb(40, 213, 243);" type="button" class="navbar-toggle"
+                    data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="ulmenu" style="text-transform: uppercase;">
+                    <li><a href="../PROJECT/Whatup.html">WHAT UP</a></li>
+                    <li><a href="../PROJECT/EXPRIENCE.html">EXPERIENCE</a>
+                        <ul class="sub-menu">
+                            <li><a href=""> modern land </a></li>
+                            <li><a href="../PROJECT/Chiche.html"> Chichén Itzá </a></li>
+                            <li><a href="../PROJECT/colosseum.html"> Colosseum </a></li>
+                            <li><a href="../PROJECT/Cristo.html"> Cristo Redentor </a></li>
+                            <li><a href="../PROJECT/GreatWall.html"> Great Wall </a></li>
+                            <li><a href="../PROJECT/Machipichu.html"> MachuPichu </a></li>
+                            <li><a href="../PROJECT/Petra.html"> Petra </a></li>
+                            <li><a href="../PROJECT/Tajmaha.html"> Taj Mahal </a></li>
+                        </ul>
+                    </li>
+                    <li class="logomax"><a href="../PROJECT/index.html"><img
+                                src="../PROJECT/img/imghome/logo-funzone-2.png" alt=""></a></li>
+                    <li><a href="../PROJECT/leisureDinning.html">LEISURE & DINNING</a>
+                    </li>
+                    <li><a href="">ABOUT US</a>
+                        <ul class="sub-menu">
+                            <li><a href="../PROJECT/contact.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div>
+            <div class="ironno1_container">
+                <div id="heart"
+                    class="ironman_heart col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-5">
+                    <img src="../PROJECT/img/highland/ironmanheart.png" alt="">
+                    <h3>Proof that Tony Stark has a heart!</h3>
+                </div>
+                <div id="ironman" class="ironman_container col-xs-4 col-md-3 col-lg-2">
+                    <img src="../PROJECT/img/highland/ironman.png" alt="">
+                </div>
+                <div id="ironbackground" class="ironbackground_container">
+                    <img src="../PROJECT/img/highland/hightechtonyhouse.jpeg" alt="">
+                    <div id="irontitle" class="irontitle_container">
+                        <a href="">
+                            <p>Contact us now</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <footer class="m-2">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">CONNECT US</div>
+                <div class="social-icon"><a href="https://www.facebook.com/funzone.vn" target="_blank">
+                        <img src="../PROJECT/img/imghome/fbicon.png" alt="facebook"></a>
+                </div>
+                <div class="social-icon"><a href="https://www.instagram.com/" target="_blank">
+                        <img src="../PROJECT/img/imghome/instagramicon.png" alt="instagram"></a>
+                </div>
+                <div class="social-icon"><a href="https://twitter.com/?lang=en" target="_blank">
+                        <img src="../PROJECT/img/imghome/twitericon.png" alt="twitter"></a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">KNOW MORE ABOUT US</div>
+                <div class="social-icon"><a href="https://www.youtube.com/watch?v=7Dbuc6vIRnE" target="_blank">
+                        <img src="../PROJECT/img/imghome/yticon.png" alt="youtube"></a>
+                </div>
+                <div class="social-icon">
+                    <a href="https://www.tiktok.com/en/" target="_blank">
+                        <img src="../PROJECT/img/imghome/tiltokicon.png" alt="tiktok"></a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
+                <div class="footer-title">CONTACT US</div>
+                <p>Email
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> : <a
+                        href="mailto:khangkhangbl101@gmail.com">khangkhangbl101@gmail.com</a>
+                </p>
+                <p>Hotline
+                    <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> : +84 703321123
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <br>
+            <p> Copyright &copy; 2021 Funzone park</p>
+
+            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="">KTN group</a></p>
+        </div>
+    </footer>
+    <script>
+        var heart = document.getElementById("heart");
+        var ironman = document.getElementById("ironman");
+        var ironbg = document.getElementById("ironbackground");
+        var irontitle = document.getElementById("irontitle");
+        heart.onclick = function () {
+            ironman.style.display = 'block';
+            ironbg.style.display = 'block';
+            irontitle.style.display = 'block';
+            heart.style.animationName = "iromanheart";
+            heart.style.animationDuration = "1.5s";
+            heart.style.animationFillMode = "forwards";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
