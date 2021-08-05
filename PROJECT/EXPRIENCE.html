@@ -220,9 +220,7 @@
 
     <script>
         //script for hover listname-img 
-
         var listimg = document.getElementsByClassName("img_invi");
-
         var listname = document.getElementsByClassName("but_hover");
 
         for (let a = 0; a < listname.length; a++) {
@@ -233,9 +231,7 @@
             }
             )
         }
-
         // script for modal pic
-
         // Get the modal
         var modal = document.getElementById("myModal");
         var img = document.getElementById("myImg");
@@ -246,10 +242,8 @@
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
         }
-
-        // Get the <span> element that closes the modal
+        // Get the x that closes the modal
         var span = document.getElementsByClassName("close")[0];
-
         //  close the modal
         span.onclick = function () {
             modal.style.display = "none";
