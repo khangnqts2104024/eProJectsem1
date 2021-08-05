@@ -25,32 +25,13 @@
             background-color: rgb(78, 76, 92);
             position: absolute;
             overflow: auto;
-
             width: 100%;
             bottom: 0%;
             display: none;
             text-align: center;
-            animation-duration: 1s;
-            animation-name: click;
-
         }
 
-        @keyframes click {
-            from {
-                -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                transform: scale(0);
-                background-color: red
-            }
-
-            to {
-                -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                transform: scale(1);
-                background-color: rgb(78, 76, 92);
-            }
-
-        }
+      
 
         .item-game {
             position: relative;
@@ -385,7 +366,7 @@
         var listitem = document.getElementsByClassName("item-game");
         for (let a = 0; a < listitem.length; a++) {
             $(listitem[a]).click(function () {
-                $(listinfo[a]).toggle();
+                $(listinfo[a]).toggle(1000);
             });
         }
 
