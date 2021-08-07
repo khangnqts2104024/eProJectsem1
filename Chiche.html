@@ -10,51 +10,40 @@
     <script src="./bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./project.css">
+    <link rel="shortcut icon" href="./img/imghome/favicon.png" type="image/x-icon">
 
     <style>
         body {
-            background-color: rgb(3, 3, 3);
-            color: rgb(89, 238, 238);
+            background-image: radial-gradient(#93d8b2, #64bea0, #4e9e7d);
+            color: rgb(5, 5, 5);
         }
 
         .header {
-            color: rgba(20, 238, 93, 0.973);
+            color: #6ce93a;
         }
 
         .info-game {
-            color: rgb(199, 172, 22);
-            background-color: rgb(78, 76, 92);
+            color: whitesmoke;
+            background-color: #428bcaf6;
             position: absolute;
             overflow: auto;
-           
+
             width: 100%;
             bottom: 0%;
             display: none;
             text-align: center;
-            animation-duration: 1s;
-            animation-name: click;
 
+
+        }
+
+        .pic2 {
+            background-color: #20639ef6;
         }
 
 
 
 
-        @keyframes click {
-            from {
-                -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                transform: scale(0);
-                background-color: red
-            }
 
-            to {
-                -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                transform: scale(1);
-                background-color: rgb(78, 76, 92);
-            }
-
-        }
 
         .item-game {
             position: relative;
@@ -70,7 +59,8 @@
             text-align: center;
             font-size: 20px;
             font-weight: bolder;
-            color: rgb(243, 34, 11);
+            color: rgb(252, 249, 61);
+            text-transform: uppercase;
         }
 
         .col-xs-12 {
@@ -107,7 +97,8 @@
                             <li><a href="./Tajmaha.html"> Taj Mahal </a></li>
                         </ul>
                     </li>
-                    <li class="logomax"><a href="./index.html"><img src="./img/imghome/logo-funzone-2.png" alt=""></a></li>
+                    <li class="logomax"><a href="./index.html"><img src="./img/imghome/logo-funzone-2.png" alt=""></a>
+                    </li>
                     <li><a href="./leisureDinning.html">LEISURE & DINNING</a>
                     </li>
                     <li><a href="./contact.html">CONTACT US</a>
@@ -139,7 +130,8 @@
 
 
         <div style="margin: 3rem 1rem ; padding: 3rem">
-            <h3 style="font-weight: bold; text-transform: uppercase;"> The mystery of the Mayan tower is waiting for you to discover! let's
+            <h3 style="font-weight: bold; text-transform: uppercase;"> The mystery of the Mayan tower is waiting for you
+                to discover! let's
                 experience!</h3>
 
         </div>
@@ -226,7 +218,7 @@
                         <div class="thumbnail height-12">
                             <img src="./img/Chichen Itza/itza3.png" alt="">
                         </div>
-                        <div class="info-game height-12">
+                        <div class="info-game pic2 height-12">
 
                             <br>
                             <p class="text-img">Boat rotates 360 degrees</p>
@@ -295,7 +287,7 @@
 
     <!-- Div Khang yêu cầu -->
     <div style="margin: 3rem 1rem ; padding: 3rem">
-        <h3 style="font-weight: bold; text-transform: uppercase;">MORE AND MORE AWESOME PLACE WAITTING FOR YOU</h3>
+        <h3 style="font-weight: bold; text-transform:uppercase;">more and more Awesome place Wating for you:</h3>
     </div>
     <div class="container-fluid m-1">
         <!-- 1  -->
@@ -334,7 +326,7 @@
     </div>
 
     </div>
-    
+
     <footer class="m-2">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footer-block">
@@ -375,7 +367,8 @@
             <br>
             <p> Copyright &copy; 2021 Funzone park</p>
 
-            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="./aboutus.html" target="_blank">KT Team</a></p>
+            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="./aboutus.html" target="_blank">KT
+                    Team</a></p>
 
         </div>
     </footer>
@@ -386,7 +379,7 @@
         var listitem = document.getElementsByClassName("item-game");
         for (let a = 0; a < listitem.length; a++) {
             $(listitem[a]).click(function () {
-                $(listinfo[a]).toggle();
+                $(listinfo[a]).toggle(1000);
             });
         }
 

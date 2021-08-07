@@ -10,45 +10,34 @@
     <script src="./bootstrap-3.4.1-dist/jquery/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./project.css">
+    <link rel="shortcut icon" href="./img/imghome/favicon.png" type="image/x-icon">
 
     <style>
         body {
-            background-color: rgba(168, 170, 62, 0.281);
+            background-color: rgba(247, 250, 174, 0.281);
         }
 
         .header {
-            color: rgb(61, 19, 19);
+            color: #4EB86C;
         }
 
         .info-game {
-            color: rgb(199, 172, 22);
-            background-color: rgb(78, 76, 92,0.8);
+            color: whitesmoke;
+            background-color: #428bcaf6;
             position: absolute;
             overflow: auto;
             width: 100%;
             bottom: 0%;
             display: none;
             text-align: center;
-            animation-duration: 1s;
-            animation-name: click;
-        }
-
-        @keyframes click {
-            from {
-                -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                transform: scale(0);
-                background-color: red
-            }
-
-            to {
-                -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                transform: scale(1);
-                background-color: rgb(78, 76, 92,0.8);
-            }
 
         }
+
+        .pic2 {
+            background-color: #20639ef6;
+        }
+
+
 
         .item-game {
             position: relative;
@@ -64,8 +53,9 @@
             text-align: center;
             font-size: 20px;
             font-weight: bolder;
-            color: rgb(243, 34, 11);
+            color: rgb(252, 249, 61);
             text-transform: uppercase;
+
         }
 
         .col-xs-12 {
@@ -77,8 +67,7 @@
 
 <body>
     <div id="MENU">
-        <div class="logomin"><a href="./index.html"><img src="./img/imghome/logo-funzone-2.png"
-                    alt=""></a></div>
+        <div class="logomin"><a href="./index.html"><img src="./img/imghome/logo-funzone-2.png" alt=""></a></div>
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <button style="background-color: rgb(40, 213, 243);" type="button" class="navbar-toggle"
@@ -103,8 +92,8 @@
                             <li><a href="./Tajmaha.html"> Taj Mahal </a></li>
                         </ul>
                     </li>
-                    <li class="logomax"><a href="./index.html"><img
-                                src="./img/imghome/logo-funzone-2.png" alt=""></a></li>
+                    <li class="logomax"><a href="./index.html"><img src="./img/imghome/logo-funzone-2.png" alt=""></a>
+                    </li>
                     <li><a href="./leisureDinning.html">LEISURE & DINNING</a>
                     </li>
                     <li><a href="./contact.html">CONTACT US</a>
@@ -119,7 +108,7 @@
     </div>
     <div class="container-fluid">
         <div class="container-imgtext">
-            <img src="./img/Cristo Redentor/cristoheader.jpg" alt="" class="img-responsive" style="min-height: 30vh;">
+            <img src="./img/Cristo Redentor/cristoheader.jpg" alt="" class="img-responsive">
             <div class="content-text">
 
                 <h1 class="shadow header" style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -226,7 +215,7 @@
                         <div class="thumbnail height-12">
                             <img src="./img/Cristo Redentor/cristo3.jpg" alt="">
                         </div>
-                        <div class="info-game height-12">
+                        <div class="info-game pic2 height-12">
 
                             <br>
                             <p class="text-img">Aquarium</p>
@@ -289,7 +278,7 @@
 
     <!-- Div Khang yêu cầu -->
     <div style="margin: 3rem ; padding: 3rem">
-        <h3 style="font-weight: bold; text-transform: uppercase;">MORE AND MORE AWESOME PLACE WAITTING FOR YOU</h3>
+        <h3 style="font-weight: bold; text-transform:uppercase;">more and more Awesome place Wating for you:</h3>
     </div>
     <div class="container-fluid m-1">
         <!-- 1  -->
@@ -366,7 +355,8 @@
             <br>
             <p> Copyright &copy; 2021 Funzone park</p>
 
-            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="./aboutus.html" target="_blank">KT Team</a></p>
+            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="./aboutus.html" target="_blank">KT
+                    Team</a></p>
 
         </div>
     </footer>
@@ -377,7 +367,7 @@
         var listitem = document.getElementsByClassName("item-game");
         for (let a = 0; a < listitem.length; a++) {
             $(listitem[a]).click(function () {
-                $(listinfo[a]).toggle();
+                $(listinfo[a]).toggle(1000);
             });
         }
 

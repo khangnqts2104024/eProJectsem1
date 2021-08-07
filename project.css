@@ -220,7 +220,12 @@ body{font-family: Arial, Helvetica, sans-serif;}
   }
   /* height for div */
   .mainheight {
-    height: 70rem;
+    height: 43vw;
+}
+@media (max-width: 992px) {
+  .mainheight{
+    height: 80vw;
+  }
 }
 
 .height-12 {
@@ -279,28 +284,32 @@ body{font-family: Arial, Helvetica, sans-serif;}
 }
 
 .container-imgtext img {
-    vertical-align: middle;
+    height: 45vw;
 }
 
 .container-imgtext .content-text {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
-    /* Black background with 0.5 opacity */
-    color: #f1f1f1;
+    /* Black background with 0.4 opacity */
+    color: #ECF1F4;
     width: 100%;
     padding:1.5vh 2rem;
 }
 /* menu */
 /* MENU dùng id menu dể tranh cac list khac bi nham*/
 
-
+#MENU{position: sticky;
+  position: -webkit-sticky;
+z-index: 100;
+top:0;
+}
 #MENU ul {
   list-style-type: none; 
   background-color: black;
   text-align: center;
   font-weight: bold;
-  box-shadow:rgb(5, 5, 5) 3px 3px 3px;
+  box-shadow:rgb(0, 0, 0) 3px 3px 15px;
       }
       /* list */
 #MENU>ul>li{text-decoration: none;
@@ -309,7 +318,8 @@ body{font-family: Arial, Helvetica, sans-serif;}
 /* canh chinh chu cho đều */
 #MENU a{line-height: 50px;
   text-decoration: none;
-  color: rgb(255, 255, 255,0.9)}
+  color: rgb(255, 255, 255,0.9)
+}
   /* dau > dể đi  tới element gần nhất ko tính cac element cùng tên khác use for color text in element */
 #MENU li:hover>a{color:rgb(155, 226, 248);}
 /* sub-menu invi */
