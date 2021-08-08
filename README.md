@@ -10,6 +10,7 @@ Project title: Fun Zone
 ========> Group 1 <=========
 
 3 collaborators: 
+
             Nguyễn Quốc Khang	            Student1313770
             
             Đinh Toàn Thịnh	            Student1316192
