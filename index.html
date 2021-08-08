@@ -81,7 +81,7 @@
     <!-- container -->
 
     <div class="container-fluid">
-        <video autoplay loop class="video" onclick="myFunction()" width="100%" height="550" id="video">
+        <video loop controls muted class="video" onclick="myFunction()" width="100%" height="550" id="video">
             <source src="./img/imghome/videohome/videohome.mp4" type="video/mp4">
         </video>
     </div>
@@ -208,14 +208,15 @@
     </footer>
     <script>
         var video = document.getElementById("video");
-        window.onload = function () { video.play(); }
-        function myFunction() {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
-        }
+        window.onload = function () { video.play();}
+        // use controls 
+        // function myFunction() {
+        //     if (video.paused) {
+        //         video.play();
+        //     } else {
+        //         video.pause();
+        //     }
+        // }
     </script>
 
 
